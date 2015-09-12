@@ -1,21 +1,27 @@
 //
-//  SecondViewController.swift
+//  MountainViewController.swift
 //  Summits
 //
-//  Created by Karl Augsten on 2014-10-26.
+//  Created by Karl Augsten on 2014-11-28.
 //  Copyright (c) 2014 Summits LLC. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
-
-    @IBOutlet var activitiesTableView : UITableView!
-    @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var profilePicture: UIImageView!
+class MountainViewController: UIViewController, APIControllerProtocol, UITableViewDelegate, UITableViewDataSource  {
+    var mountain: Mountain?
     
     var activities = [Activity]()
     
+    @IBOutlet weak var mountainLabel: UILabel!
+    @IBOutlet weak var mountainNavBar: UINavigationBar!
+    @IBOutlet weak var heightFeetLabel: UILabel!
+    @IBOutlet weak var heightMetersLabel: UILabel!
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var activitiesTableView: UITableView!
+    @IBOutlet weak var activitiesButton: UIButton!
+
     lazy var api : APIController = APIController(delegate: self, user:user)
     
     required init(coder aDecoder: NSCoder) {
@@ -24,20 +30,21 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = user.username
-        self.userLabel.text = user.username
-        if user.profilePicture != "" {
-            let decodedData = NSData(base64EncodedString: user.profilePicture, options: NSDataBase64DecodingOptions(rawValue: 0))
-            var decodedimage = UIImage(data: decodedData!)!
-            profilePicture.image = decodedimage as UIImage
+        if let mount = self.mountain {
+            self.title = mount.name
+            self.heightFeetLabel.text = mount.height_feet
+            self.heightMetersLabel.text = mount.height_meters
+            self.latitudeLabel.text = mount.latitude
+            self.longitudeLabel.text = mount.longitude
+            api.getActivitiesByMountain(mount.id)
         }
-        api.getActivitiesByUser(user.username)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let id = segue.identifier {
             if id == "New Activity" {
                 var newActivityViewController: NewActivityViewController = segue.destinationViewController as NewActivityViewController
+                newActivityViewController.mountain = self.mountain
             } else if id == "Show Activity" {
                 var showActivityViewController: ActivityViewController = segue.destinationViewController as ActivityViewController
                 let selectedIndex = self.activitiesTableView.indexPathForCell(sender as UITableViewCell)
@@ -90,5 +97,5 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             alert.show()
         })
     }
-}
 
+}

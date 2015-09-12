@@ -14,6 +14,16 @@
 		5546EC6E19FDA8F20087C84E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5546EC6D19FDA8F20087C84E /* Images.xcassets */; };
 		5546EC7119FDA8F20087C84E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5546EC6F19FDA8F20087C84E /* LaunchScreen.xib */; };
 		5546EC7D19FDA8F30087C84E /* SummitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5546EC7C19FDA8F30087C84E /* SummitsTests.swift */; };
+		5546EC8719FDACA80087C84E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5546EC8619FDACA80087C84E /* LoginViewController.swift */; };
+		559FB8731A1C528300254B08 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559FB8721A1C528300254B08 /* APIController.swift */; };
+		55CEDD581A560A65001C6E83 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEDD571A560A65001C6E83 /* ActivityCell.swift */; };
+		55D3DBF91A28598900439980 /* MountainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3DBF81A28598900439980 /* MountainViewController.swift */; };
+		55D3DBFD1A2864A700439980 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3DBFC1A2864A700439980 /* User.swift */; };
+		55D3DBFF1A28673600439980 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3DBFE1A28673600439980 /* Activity.swift */; };
+		55D3DC011A2AAF8600439980 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3DC001A2AAF8600439980 /* NewActivityViewController.swift */; };
+		55D3DC031A2ADAB700439980 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3DC021A2ADAB700439980 /* ActivityViewController.swift */; };
+		55DF4E591A2444C500C01ABA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF4E581A2444C500C01ABA /* RegisterViewController.swift */; };
+		55DF4E5B1A24628500C01ABA /* Mountain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF4E5A1A24628500C01ABA /* Mountain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +48,16 @@
 		5546EC7619FDA8F30087C84E /* SummitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SummitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5546EC7B19FDA8F30087C84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5546EC7C19FDA8F30087C84E /* SummitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummitsTests.swift; sourceTree = "<group>"; };
+		5546EC8619FDACA80087C84E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		559FB8721A1C528300254B08 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIController.swift; path = ../APIController.swift; sourceTree = "<group>"; };
+		55CEDD571A560A65001C6E83 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		55D3DBF81A28598900439980 /* MountainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainViewController.swift; sourceTree = "<group>"; };
+		55D3DBFC1A2864A700439980 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		55D3DBFE1A28673600439980 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		55D3DC001A2AAF8600439980 /* NewActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
+		55D3DC021A2ADAB700439980 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		55DF4E581A2444C500C01ABA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		55DF4E5A1A24628500C01ABA /* Mountain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mountain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +99,7 @@
 		5546EC6119FDA8F00087C84E /* Summits */ = {
 			isa = PBXGroup;
 			children = (
+				559FB8721A1C528300254B08 /* APIController.swift */,
 				5546EC6419FDA8F10087C84E /* AppDelegate.swift */,
 				5546EC6619FDA8F10087C84E /* FirstViewController.swift */,
 				5546EC6819FDA8F10087C84E /* SecondViewController.swift */,
@@ -86,6 +107,15 @@
 				5546EC6D19FDA8F20087C84E /* Images.xcassets */,
 				5546EC6F19FDA8F20087C84E /* LaunchScreen.xib */,
 				5546EC6219FDA8F00087C84E /* Supporting Files */,
+				5546EC8619FDACA80087C84E /* LoginViewController.swift */,
+				55DF4E581A2444C500C01ABA /* RegisterViewController.swift */,
+				55DF4E5A1A24628500C01ABA /* Mountain.swift */,
+				55D3DBF81A28598900439980 /* MountainViewController.swift */,
+				55D3DBFC1A2864A700439980 /* User.swift */,
+				55D3DBFE1A28673600439980 /* Activity.swift */,
+				55D3DC001A2AAF8600439980 /* NewActivityViewController.swift */,
+				55D3DC021A2ADAB700439980 /* ActivityViewController.swift */,
+				55CEDD571A560A65001C6E83 /* ActivityCell.swift */,
 			);
 			path = Summits;
 			sourceTree = "<group>";
@@ -215,9 +245,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D3DBFF1A28673600439980 /* Activity.swift in Sources */,
+				5546EC8719FDACA80087C84E /* LoginViewController.swift in Sources */,
+				55D3DBF91A28598900439980 /* MountainViewController.swift in Sources */,
 				5546EC6919FDA8F10087C84E /* SecondViewController.swift in Sources */,
 				5546EC6519FDA8F10087C84E /* AppDelegate.swift in Sources */,
+				55DF4E5B1A24628500C01ABA /* Mountain.swift in Sources */,
+				55D3DBFD1A2864A700439980 /* User.swift in Sources */,
+				55CEDD581A560A65001C6E83 /* ActivityCell.swift in Sources */,
+				55D3DC031A2ADAB700439980 /* ActivityViewController.swift in Sources */,
+				55DF4E591A2444C500C01ABA /* RegisterViewController.swift in Sources */,
+				55D3DC011A2AAF8600439980 /* NewActivityViewController.swift in Sources */,
 				5546EC6719FDA8F10087C84E /* FirstViewController.swift in Sources */,
+				559FB8731A1C528300254B08 /* APIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +449,7 @@
 				5546EC8219FDA8F30087C84E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5546EC8319FDA8F30087C84E /* Build configuration list for PBXNativeTarget "SummitsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +458,7 @@
 				5546EC8519FDA8F30087C84E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
